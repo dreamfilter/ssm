@@ -1,0 +1,99 @@
+/*首页样式*/
+
+.portlet.light.portlet-fit > .portlet-title {
+    margin-bottom: 0;
+}
+
+.dashboard-stat {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    margin-bottom: 10px;
+}
+
+.dashboard-stat.has-background-color {
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+}
+
+@media screen and (max-width: 1680px) {
+    .dashboard-stat .details {
+        right: 20px;
+        left: 10px;
+    }
+}
+
+@media screen and (min-width: 1681px) {
+    .dashboard-stat .details {
+        right: 40px;
+        left: 10px;
+    }
+}
+
+.dashboard-stat .details .desc,
+.dashboard-stat .details .number {
+    font-family: "microsoft yahei",Arial, serif;
+    font-size: 14px;
+    padding-top: 25px;
+    line-height: 20px;
+    cursor: default;
+}
+
+.dashboard-stat .details .number {
+    padding-top: 10px;
+}
+
+.homepage-block {
+    width: 98%;
+    margin: 0 auto;
+}
+
+.homepage-block.has-border-bottom{
+    padding-bottom: 30px;
+    border-bottom: 1px dashed #B5B5B5;
+}
+
+.homepage-block h4.block-title {
+    margin-bottom: 20px;
+}
+
+.blue-background {
+    background-color: #3598DC;
+}
+
+.student-background {
+    background-color: #8e44ad;
+}
+
+.newOrderAmount-background {
+    background-color: #33c5d2;
+}
+
+.orderNum-background {
+    background-color: #966602;
+}
+
+.red-background {
+    background-color: #E7505A;
+}
+
+.green-background {
+    background-color: #32C5D2;
+}
+
+.purple-background {
+    background-color: #8E44AD;
+}
+
+.blue-background, .red-background, .green-background, .purple-background {
+    color: #ffffff;
+}
+
+.portlet.light.chart-title > .portlet-title > .caption > .caption-subject{
+    font-size: 14px;
+    color: #333333;
+}
+
+.portlet.light.chart-title > .portlet-title{
+    margin-bottom: 0;
+    border-bottom: none;
+    min-height: 30px;
+}

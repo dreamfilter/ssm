@@ -1,0 +1,24 @@
+
+
+/*.fc-sat {*/
+	/*background-color: #eaeaea;*/
+/*}*/
+/*.fc-sun {*/
+	/*background-color: #eaeaea;*/
+/*}*/
+
+.fc-widget-header {
+	background-color: #eaeaea;
+	height: 30px;
+	text-align: center;
+	margin-top: 10px;
+}
+
+.fc-rtl {
+	text-align: right;
+}
+
+body .fc { /* extra precedence to overcome jqui */
+	font-size: 1em;
+}
+

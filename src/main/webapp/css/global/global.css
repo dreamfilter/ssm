@@ -1,0 +1,169 @@
+* {
+    font-family: '微软雅黑', sans-serif;
+}
+body, h1, h2, h3, h4, h5, h6, a {
+    font-family: '微软雅黑', sans-serif !important;
+}
+
+.mt5 {
+    margin-top: 5px;
+}
+.modal-footer{
+    background-color: #f5f5f5;
+}
+.form-group .form-control-static{
+    width:95%;
+    border-bottom:1px solid #E5E5E5;;
+}
+.login .content .login-form .form-actions{
+    padding-bottom:40px;
+}
+.form-actions .checkbox{
+    margin-top: 20px;
+}
+.change-select-center-div {
+    margin-top: 100px
+}
+
+.change-select-btn-div {
+    margin: 20px auto;
+    text-align: center;
+}
+
+.dataTables_extended_wrapper .table.dataTable {
+    margin-top: 0 !important;
+}
+
+.daterangepicker select.monthselect, .daterangepicker select.yearselect {
+    background-color: #fff;
+    border: 1px solid #c2cad8;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    height: 34px;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    color: #555;
+    font-size: 14px;
+    line-height: 1.42857;
+    outline: 0 none !important;
+    width: 70px
+}
+
+.date-range .form-control {
+    padding:6px 8px
+}
+
+table.dataTable thead td {
+    padding: 10px 5px
+}
+.fixedHeader-floating{
+    z-index: 3;
+}
+
+.advanced-filter {
+    display: none
+}
+.advanced-filter .form-section{
+    margin-top: 0;
+    margin-bottom:5px;
+}
+.advanced-filter .form-body{
+    padding:0 20px!important;
+}
+.advanced-filter .advanced-filter-row{
+    display:table;
+    width:100%
+}
+.table .advanced-filter .btn{
+    margin-right:0;
+}
+
+.table .query-btn-td {
+    min-width: 135px;
+    padding-left: 0;
+    padding-right: 0
+}
+.table .query-btn-td a.btn{
+    margin-right:0;
+    margin-left:2px;
+}
+.table a i {
+    width:13px
+}
+@media (min-width: 768px) {
+    .modal-xl {
+        width: 768px;
+    }
+}
+@media (min-width: 1200px) {
+    .modal-xl {
+        width: 1200px;
+    }
+}
+
+span.bootstrap-maxlength{
+    z-index: 10050!important;
+}
+
+.margin-top-5{
+    margin-top: 5px;
+}
+
+a.view {
+    text-decoration: none;
+    color: #fff;
+}
+
+table .no-border td{
+    border-top: none!important;
+}
+.checkbox-list{
+    padding-left: 20px;
+}
+
+a.view-a{
+    padding-right: 10px;
+}
+.appointment-btn{
+    float: right;
+    margin: 13px 10px 0 30px;
+}
+
+textarea{
+    resize:none;
+}
+
+.dataTable tbody tr td {
+    word-break: break-all;
+}
+
+.radio-inline{
+    margin-right: 10px;
+    margin-left: 0 !important;
+}
+
+input::-ms-clear{display:none;}
+
+.modal-body table tr td p img{
+    max-width: 100%;
+}
+
+.modal-body table tr td#content{
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+}
+
+table.search-box tbody tr th{
+    width: 50px;
+    text-align: right;
+    border-top:none;
+    vertical-align: middle;
+}
+table.search-box tbody tr td{
+    width: 13%;
+    text-align: right;
+     border-top:none;
+ }
+.float-l{
+    float: left;
+}

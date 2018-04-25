@@ -1,0 +1,39 @@
+/*.portlet.light.bordered {
+    margin: 15px;
+}*/
+.right-btn{
+    float: right
+}
+.right-btn a{
+    margin-right: 10px;
+}
+.title-span{
+    font-weight:600;
+    font-size: 15px;
+    font-family: "microsoft yahei", Arial, serif;
+    line-height: 30px;
+    margin-left: 5px;
+}
+.back-btn{
+    margin: -39px 20px 11px;
+}
+.page-content{
+    padding: 20px!important;
+}
+
+.all-btn {
+    margin:  -6px 0 10px;
+}
+
+ .table-bordered > thead > tr > td {
+     border-bottom-width: 0 !important;
+ }
+
+.view-table.table tr th {
+    line-height: 25px !important;
+    vertical-align: middle !important;
+}
+
+.view-table.table tr td {
+    vertical-align: middle !important;
+}

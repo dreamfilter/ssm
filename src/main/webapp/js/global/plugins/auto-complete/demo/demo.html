@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link href="../bower_components/fontawesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../dist/auto-complete.min.css" rel="stylesheet" type="text/css"/>
+    <script src="../bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>
+    <script src="../dist/auto-complete.min.js" type="text/javascript"></script>
+    <!--国际化-->
+    <script src="../dist/i18n/message.zh_CN.js" type="text/javascript"></script>
+    <base href="http://localhost:8080/eyas/"/>
+</head>
+<body>
+<div class="container">
+    <div class="jumbotron">
+        <h1>auto-complete插件demo</h1>
+        <p>访问前需要先在auto-complete根目录运行<code>bower install</code>安装所需插件，然后才可访问。</p>
+        <p>访问地址：http://localhost:8080/eyas/js/global/plugins/auto-complete/demo/demo.html
+            （必须运行服务且<span style="color:red">登录</span>后自动提示才能有数据,如果访问地址不是这个，请修改base标签中的地址）。</p>
+        <p>信息会打印在控制台，请打开firebug或开发人员工具</p>
+    </div>
+    <form>
+        <h2 class="page-header">基础功能</h2>
+        <div class="form-group">
+            <label for="username">测试input</label>
+            <input type="text" data-gautoflag="gAutoUsername" id="username" class="form-control"/><br/>
+        </div>
+        <button type="button" id="initBtn" class="btn btn-info">初始化username</button>
+        <pre>
+        $("#initBtn").click(function(){
+            $("#username").gAuto();
+            console.log("设置初始化成功，请输入内容后测试");
+        });
+        </pre>
+        <button type="button" id="initAllBtn" class="btn btn-info">初始化页面中所有带有'data-gautoflag'属性的input</button>
+        <pre>
+            $("#initAllBtn").click(function(){
+                $.gAuto();
+                console.log("初始化成功，请输入内容后测试");
+            });
+        </pre>
+        <button type="button" id="callbackBtn" class="btn btn-info">设置选中回调函数</button>
+        <pre>
+            $("#callbackBtn").click(function(){
+                $("#username").gAuto({
+                    selectedCallback:function($autoText){
+                        console.log("selected!");
+                        console.log("text:"+$autoText.val());
+                        console.log("hiddenValue:"+$autoText.getGAutoHiddenValue());
+                    }
+                });
+                console.log("设置选中回调函数成功，请输入内容后测试");
+            });
+        </pre>
+        <button type="button" id="scrollBtn" class="btn btn-info">设置提示div不随滚动条滚动</button>
+        <pre>
+            $("#scrollBtn").click(function(){
+                $("#username").gAuto({
+                    staticWithScroll:true
+                });
+                console.log("设置提示div不随滚动条滚动成功，请输入内容后测试");
+            });
+        </pre>
+        <button type="button" id="getHiddenValue" class="btn btn-info">获取hiddenValue</button>
+        <pre>
+            $("#getHiddenValue").click(function(){
+                console.log("hiddenValue是："+$("#username").getGAutoHiddenValue())
+            })
+        </pre>
+        <br/>
+        <br/>
+        <div class="form-group">
+            <label for="username2">对自动提示框进行自定义样式：在input上加入<code>data-auto-class</code>属性，属性值即为要添加的class，例如</label>
+            <input type="text" data-gautoflag="gAutoUsername" id="username2" data-auto-class="test" class="form-control"/>
+        </div>
+        <h2 class="page-header">高级功能</h2>
+        <p>
+            动态自动提示：可根据页面其他条件动态查询并返回结果<br/>
+            1.input上增加data-req-url属性（可以利用脚本动态更改url后面的参数）：
+<pre>
+&lt;input type="text" data-gautoflag="" id="username3" data-req-url="customAutoComplete/getTeamList?param=1"/&gt;
+</pre>
+            2.在CustomAutoCompleteController中增加getTeamList方法，示例如下：
+<pre>
+@RequestMapping("/getTeamList")
+@ResponseBody
+public List&lt;AutoComplete&gt; getTeamList(AutoComplete autoCompleteParam,String companyCode){
+    return customAutoCompleteService.getTeamList(autoCompleteParam);
+}
+</pre>
+            3.在CustomAutoCompleteServiceImpl中增加如下代码
+<pre>
+public List&lt;AutoComplete&gt; getTeamList(AutoComplete autoCompleteParam) {
+    List&lt;AutoComplete&gt; autoCompleteList = autoCompleteDao.getTeamList();
+    initAutoCompleteSpell(autoCompleteList);
+    return getMatchAutoCompleteList(autoCompleteParam, autoCompleteList);
+}
+</pre>
+            4.在dao方法中加入相应的方法
+
+        </p>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    </form>
+</div>
+<style>
+    .test{
+        border:2px solid red;
+    }
+</style>
+<script>
+    $(function(){
+        $("#username2").gAuto();
+        $("#initBtn").click(function(){
+            $("#username").gAuto();
+            console.log("设置初始化成功，请输入内容后测试");
+        });
+
+        $("#initAllBtn").click(function(){
+            $.gAuto();
+            console.log("初始化成功，请输入内容后测试");
+        });
+
+
+        $("#callbackBtn").click(function(){
+            $("#username").gAuto({
+                selectedCallback:function($autoText){
+                    console.log("selected!");
+                    console.log("text:"+$autoText.val());
+                    console.log("hiddenValue:"+$autoText.getGAutoHiddenValue());
+                }
+            });
+            console.log("设置选中回调函数成功，请输入内容后测试");
+        });
+
+        $("#scrollBtn").click(function(){
+            $("#username").gAuto({
+                staticWithScroll:true
+            });
+            console.log("设置提示div不随滚动条滚动成功，请输入内容后测试");
+        });
+        $("#getHiddenValue").click(function(){
+            console.log("hiddenValue是："+$("#username").getGAutoHiddenValue())
+        })
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+@charset "utf-8";
+.fc-ltr .fc-time-grid .fc-event-container{
+    margin: 0;
+}
+
+.fc-event .fc-content{
+    padding: 5px;
+}
+.fc-time-grid-event .fc-time{
+    font-size: 1em;
+}
+
+.three-inline{
+    width: 45%;
+    float: left;
+}
+.span-inline{
+    width: 10%;
+    float: left;
+}
+
+.mainEvent{
+    left: 0 !important;
+}
+
+.disable{
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
+.margin-right-25{
+    margin-right: 25% !important;
+}
+.break-content{
+    white-space:normal;
+    word-break:break-all;
+}
+.teacherLeave{
+    margin-right: 0!important;
+}

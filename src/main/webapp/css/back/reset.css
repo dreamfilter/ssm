@@ -1,0 +1,94 @@
+/*部分样式重定义*/
+
+/*页面无边框时的处理*/
+.page-content-wrapper .page-content {
+    padding: 0;
+}
+
+.center {
+    text-align: center;
+}
+
+.f-left {
+    float: left;
+}
+
+/*改变标签的padding-top start*/
+.padding-top5 {
+    padding-top: 5px;
+}
+
+.padding-top15 {
+    padding-top: 15px;
+}
+
+/*改变标签的padding-top end*/
+
+/*改变标签的padding-right start*/
+.padding-right0 {
+    padding-right: 0;
+}
+
+.padding-right10 {
+    padding-right: 10px;
+}
+
+.padding-right20 {
+    padding-right: 20px;
+}
+
+/*改变标签的padding-right end*/
+/*改变标签的padding-bottom start*/
+.padding-bottom10 {
+    padding-bottom: 10px;
+}
+
+.padding-bottom20 {
+    padding-bottom: 20px;
+}
+
+/*改变标签的padding-bottom end*/
+/*改变标签的padding-left start*/
+.padding-left0 {
+    padding-left: 0;
+}
+
+.padding-left5 {
+    padding-left: 5px;
+}
+
+.padding-left20 {
+    padding-left: 20px;
+}
+
+/*改变标签的padding-left end*/
+/*改变标签的margin-bottom start*/
+.margin-bottom0 {
+    margin-bottom: 0;
+}
+
+/*改变标签的margin-bottom end*/
+.form-control-inline {
+    display: inline-block;
+}
+
+.form-control.date-picker {
+    width: 210px;
+}
+.font-grey-statistics{
+    color: #666666;
+}
+
+.table-vertical-middle{
+    vertical-align: middle !important;
+}
+
+.has-no-type-p p{
+    margin: 0;
+}
+
+/*改写btn样式start*/
+.btn-longer{
+    padding: 6px 40px;
+}
+/*改写btn样式end*/
